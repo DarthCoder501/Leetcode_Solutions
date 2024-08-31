@@ -11,10 +11,10 @@ class Solution:
             # Now, we'll loop over each character in the string 's'(in each word). 
             for char in s: 
                 # ord(char) - ord('a') gives us the position of the letter in the alphabet & correct position in our 'count' list.
-                count[ord(char) - ord('a')] += 1 # We increment the value at that position by 1. This way, we count how many times each letter appears.
+                count[ord(char) - ord('a')] += 1 # We increment the value at that position by 1 to we count how many times each letter appears.
               
-            # After counting the letters in the string, convert 'count' list into a tuple to use as a key in our 'ans' dictionary to group all strings with the same letter counts.
-            ans[tuple(count)].append(s) # We append the original string 's' to the list corresponding to this key.
+            # After counting letters in 's' convert 'count' into a tuple to use as a key for 'ans' dict to group all strings w/ the same letter counts.
+            ans[tuple(count)].append(s) # Append the original string 's' to the list corresponding to this key.
 
         #ans.values() gives us all the lists of grouped anagrams as a single list of lists.
         return list(ans.values())
