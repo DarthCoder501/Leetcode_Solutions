@@ -1,0 +1,12 @@
+class Solution:
+    def restoreString(self, s: str, indices: List[int]) -> str:
+        # Initialize a list of empty strings with the same length as 's'.
+        res = [""] * len(s)
+        
+        # Loop through the string 's' and its corresponding index 'indices'.
+        for i, char in enumerate(s): # 'i' is the index in the string, 'char' is the character at that index.
+            # Place the character 'char' at the position specified by 'indices[i]' in the 'res' list.
+            res[indices[i]] = char
+            
+        # Join all the characters in 'res' into a single string and return the result.
+        return "".join(res)
